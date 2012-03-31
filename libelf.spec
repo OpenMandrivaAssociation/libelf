@@ -1,6 +1,6 @@
 Name:		libelf
 Version:	0.8.13
-Release:	2
+Release:	3
 Summary:	An ELF object file access library
 Group:		Development/C
 License:	LGPLv2
@@ -41,6 +41,7 @@ This package contains locales-only data.
 %package devel
 Summary:	An ELF object file access library: development files
 Requires:	%{name} = %{version}-%{release}
+Conflicts:	elfutils-devel
 
 %description devel
 libelf provides routines to access and manipulate ELF object files. It
@@ -58,6 +59,7 @@ linked with this library, install the libelfg0 package.
 %{_libdir}/%{name}.so
 %{_libdir}/%{name}.a
 %{_includedir}/%{name}/
+%{_includedir}/*.h
 %{_libdir}/pkgconfig/%{name}.pc
 
 %prep
