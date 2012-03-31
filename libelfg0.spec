@@ -2,7 +2,7 @@
 
 Name:		libelfg0
 Version:	0.8.13
-Release:	1
+Release:	2
 Summary:	An ELF object file access library
 Group:		Development/C
 License:	LGPLv2
@@ -26,6 +26,7 @@ package as well.
 
 %package locales
 Summary:	An ELF object file access library: locales
+BuildArch:	noarch
 
 %description locales
 libelf provides routines to access and manipulate ELF object files. It
@@ -41,7 +42,7 @@ This package contains locales-only data.
 
 %package devel
 Summary:	An ELF object file access library: development files
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 
 %description devel
 libelf provides routines to access and manipulate ELF object files. It
