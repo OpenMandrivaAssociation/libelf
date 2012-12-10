@@ -71,3 +71,16 @@ linked with this library, install the libelfg0 package.
 
 %install
 %makeinstall
+
+
+%changelog
+* Sat Mar 31 2012 Alexandre Lissy <alissy@mandriva.com> 0.8.13-3
++ Revision: 788541
+- Add conflicts against elfutils-devel
+  Package files in /usr/include
+- Fix package name
+- Adding noarch for locales
+  Include release in devel's depends against library
+- Adding libelf from http://www.mr511.de/software/english.html, known as libelfg0 in Debian. Will be used by python-pylibelf later.
+- Created package structure for 'libelf'.
+
