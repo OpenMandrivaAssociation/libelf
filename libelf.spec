@@ -7,6 +7,7 @@ License:	LGPLv2
 URL:		http://www.mr511.de/software/english.html
 Source0:	http://www.mr511.de/software/%{name}-%{version}.tar.gz
 Suggests:	%{name}-locales
+Patch0:		libelf-aarch64.patch
 
 %description
 libelf provides routines to access and manipulate ELF object files. It
@@ -59,14 +60,18 @@ linked with this library, install the libelfg0 package.
 %{_libdir}/%{name}.so
 %{_libdir}/%{name}.a
 %{_includedir}/%{name}/
-%{_includedir}/*.h
 %{_libdir}/pkgconfig/%{name}.pc
 
 %prep
 %setup -q -n %{name}-%{version}
+%patch0 -p1
 
 %build
 %configure
+#fedya 
+#dirty hack for cross-compilation
+sed -i 's/CC = gcc/CC = %{__cc}/g' Makefile
+sed -i 's/CC = gcc/CC = %{__cc}/g' lib/Makefile
 %make
 
 %install
