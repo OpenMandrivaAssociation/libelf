@@ -1,6 +1,6 @@
 Name:		libelf
 Version:	0.8.13
-Release:	3
+Release:	4
 Summary:	An ELF object file access library
 Group:		Development/C
 License:	LGPLv2
