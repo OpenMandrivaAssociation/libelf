@@ -4,7 +4,7 @@ Release:	5
 Summary:	An ELF object file access library
 Group:		Development/C
 License:	LGPLv2
-URL:		http://www.mr511.de/software/english.html
+URL:		https://www.mr511.de/software/english.html
 Source0:	http://www.mr511.de/software/%{name}-%{version}.tar.gz
 Suggests:	%{name}-locales
 
